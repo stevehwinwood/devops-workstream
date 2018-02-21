@@ -8,3 +8,7 @@
 
 # exclude IDE settings
 .idea
+
+# exclude .vagrant working files
+.vagrant/
+
