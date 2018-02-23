@@ -8,8 +8,10 @@ sudo /usr/bin/python3.4 setup.py install
 cd ~
 virtualenv mave
 source ./mave/bin/activate
-pip install awscli --upgrade
-pip install aws-shell
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+sudo pip install awscli --upgrade --user
+sudo pip install aws-shell
 wget -O terraform_0.11.3_linux_amd64.zip https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip?_ga=2.198897391.1509687785.1519136753-1417898106.1519136753
 unzip terraform_0.11.3_linux_amd64.zip
 sudo mv ./terraform /usr/local/bin ; sudo chown root:root /usr/local/bin/terraform ; sudo chmod 755 /usr/local/bin/terraform
@@ -18,4 +20,5 @@ unzip packer_1.2.0_linux_amd64.zip
 sudo mv ./packer /usr/local/bin ; sudo chown root:root /usr/local/bin/packer ; sudo chmod 755 /usr/local/bin/packer
 sudo su
 echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc
+echo 'export PATH=~/.local/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc

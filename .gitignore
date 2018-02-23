@@ -11,4 +11,5 @@
 
 # exclude .vagrant working files
 .vagrant/
+.DS_Store
 
