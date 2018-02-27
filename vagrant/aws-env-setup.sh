@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo yum install epel-release wget unzip vim -y
+sudo yum install epel-release wget unzip vim git -y
 sudo yum install python34 -y
 curl -O https://pypi.python.org/packages/source/v/virtualenv/virtualenv-13.1.2.tar.gz
 tar xvfz virtualenv-13.1.2.tar.gz
