@@ -18,6 +18,12 @@ sudo mv ./terraform /usr/local/bin ; sudo chown root:root /usr/local/bin/terrafo
 wget -O packer_1.2.0_linux_amd64.zip https://releases.hashicorp.com/packer/1.2.0/packer_1.2.0_linux_amd64.zip?_ga=2.167406846.136588575.1519136961-1144394424.1519136961
 unzip packer_1.2.0_linux_amd64.zip
 sudo mv ./packer /usr/local/bin ; sudo chown root:root /usr/local/bin/packer ; sudo chmod 755 /usr/local/bin/packer
+curl -LO https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+curl -LO https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/amd64/heptio-authenticator-aws
+chmod +x ./heptio-authenticator-aws
+sudo mv ./heptio-authenticator-aws /usr/local/bin/heptio-authenticator-aws
 sudo su
 echo 'export PATH=$PATH:/usr/local/bin' >> ~/.bashrc
 echo 'export PATH=~/.local/bin:$PATH' >> ~/.bashrc
